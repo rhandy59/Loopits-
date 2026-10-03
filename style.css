@@ -3203,3 +3203,49 @@ main {
 
     margin-top: 9px;
 }
+
+/* Orders page: force image size no matter what the wrapper class is */
+.order-card {
+    grid-template-columns: 140px 1fr auto auto;
+}
+
+.order-card > div:first-child {
+    width: 140px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f5f7fb;
+}
+
+.order-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Order detail page */
+.order-detail-product > div:first-child {
+    width: 90px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.order-detail-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .order-card {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .order-card > div:first-child {
+        width: 100px;
+        height: 80px;
+    }
+}
